@@ -1,10 +1,58 @@
 import React from 'react';
+import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/NavBar';
+import Nav from 'react-bootstrap/Nav';
+
 class App extends React.Component {
+
+constructor(props){
+  super(props);
+  this.state ={
+    title: 'Brady Novaes',
+    headerLinks : [
+      {title: 'Home', path: '/'},
+      {title: 'About', path: '/about'},
+      {title: 'Contact', path: '/contact'},
+    ],
+    home: {
+      title: 'Future Lawn and Landscaping',
+      subTitle: 'Serving you and out community.',
+      text: 'See services below'
+    },
+    about: {
+      title: 'About Me',
+      
+    },
+    contact: {
+      title: 'Contact Me',
+      
+    },
+  }
+}
+
   render() {
     return (
-      <div>Hello from react</div>
+      <Router>
+        <Container className ="p-0" fluid={true}>
+          <Navbar className="border-bottom" bg="transparent" expand="lg">
+            <Navbar.Brand>
+              Brady Novaes
+            </Navbar.Brand>
+
+            <Navbar.Toggle aria-controls="navbar-toggle" />
+            <Navbar.Collapse id="navbar-toggle">
+              <Nav className="ml-auto">
+                <Link className="nav-link" to="/">Home</Link>
+                <Link className="nav-link" to="/about">About</Link>
+                <Link className="nav-link" to="/contact">Conact</Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </Container>
+      </Router>
     );
   }
   
