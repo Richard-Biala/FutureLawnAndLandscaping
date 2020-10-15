@@ -6,6 +6,12 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/NavBar';
 import Nav from 'react-bootstrap/Nav';
 
+import Footer from './components/Footer';
+
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+
 class App extends React.Component {
 
 constructor(props){
@@ -19,7 +25,7 @@ constructor(props){
     ],
     home: {
       title: 'Future Lawn and Landscaping',
-      subTitle: 'Serving you and out community.',
+      subTitle: 'Making a difference in our community.',
       text: 'See services below'
     },
     about: {
@@ -42,15 +48,27 @@ constructor(props){
               Brady Novaes
             </Navbar.Brand>
 
-            <Navbar.Toggle aria-controls="navbar-toggle" />
+            <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
                 <Link className="nav-link" to="/">Home</Link>
                 <Link className="nav-link" to="/about">About</Link>
                 <Link className="nav-link" to="/contact">Conact</Link>
+
+    
               </Nav>
             </Navbar.Collapse>
           </Navbar>
+
+
+          <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
+          <Route path="/about" render={() => <AboutPage title={this.state.about.title}/> } />
+          <Route path="/contact" render={() => <ContactPage title={this.state.about.title}/>} />
+
+
+          <Footer>
+
+          </Footer>
         </Container>
       </Router>
     );
