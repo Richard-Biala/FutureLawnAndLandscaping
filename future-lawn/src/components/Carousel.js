@@ -20,7 +20,7 @@ class Carousel extends React.Component {
                     id: 0,
                     title: 'Title',
                     subTitle: 'subTitle',
-                    imgSrc: mower.png,
+                    imgSrc: mower,
                     // link: '',
                     selected: false
                 },
@@ -28,7 +28,7 @@ class Carousel extends React.Component {
                     id: 1,
                     title: 'Title',
                     subTitle: 'subTitle',
-                    imgSrc: byard.png,
+                    imgSrc: byard,
                     // link: '',
                     selected: false
                 },
@@ -36,7 +36,7 @@ class Carousel extends React.Component {
                     id: 2,
                     title: 'Title',
                     subTitle: 'subTitle',
-                    imgSrc: fyard.png,
+                    imgSrc: fyard,
                     // link: '',
                     selected: false
                 },
