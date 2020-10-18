@@ -41,3 +41,17 @@ code {
 img {
   width: 500px;
 }
+
+.brady {
+  max-width: 100%;
+  height: auto;
+}
+
+p.contacts {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.hero {
+  text-align: center;
+}

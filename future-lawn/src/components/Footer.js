@@ -12,7 +12,7 @@ function Footer() {
                         Brady Novaes
                     </Col>
                     <Col className="p-0 d-flex justify-content-end" md={3}>
-                        Site by Richard Biala
+                        Zeroshift Web Design
                     </Col>
                 </Row>
             </Container>
